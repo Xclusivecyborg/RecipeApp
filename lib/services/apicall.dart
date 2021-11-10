@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:myrecipe/models.dart';
+import 'package:myrecipe/models/models.dart';
 
 class RecipeApi {
   static Future<List<Recipe>> getRecipe() async {

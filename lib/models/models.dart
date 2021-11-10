@@ -9,7 +9,7 @@ class Recipe {
   factory Recipe.fromJson(dynamic json) {
     return Recipe(
       name: json["name"] as String,
-      images: json["images"][0]['hostedLargeUrl'] as String,
+      images: json["images"][0]["resizableImageUrl"] as String,
       totalTime: json["totalTime"] as String,
       rating: json["rating"] as double,
     );
@@ -19,8 +19,8 @@ class Recipe {
     return snapshot.map((data) => Recipe.fromJson(data)).toList();
   }
 
-  // @override
-  // String toString() {
-  //   return 'Recipe name: $name, images: $images, totalTime: $totalTime, rating: $rating';
-  // }
+  @override
+  String toString() {
+    return 'Recipe name: $name, images: $images, totalTime: $totalTime, rating: $rating';
+  }
 }
